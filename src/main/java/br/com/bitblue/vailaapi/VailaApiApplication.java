@@ -8,7 +8,6 @@ import br.com.bitblue.vailaapi.controller.EventoController;
 
 @SpringBootApplication
 @EnableJpaAuditing
-@ComponentScan(basePackageClasses = EventoController.class)
 public class VailaApiApplication {
 
 	public static void main(String[] args) {
