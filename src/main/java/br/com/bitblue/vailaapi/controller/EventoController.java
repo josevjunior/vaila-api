@@ -29,7 +29,7 @@ public class EventoController {
     public List<Evento> getAll(){
         return eventoRepository.findAll();
     }
-    
+        
     @PostMapping("/eventos")
     public Evento create(@Valid @RequestBody Evento evento){
         return eventoRepository.save(evento);

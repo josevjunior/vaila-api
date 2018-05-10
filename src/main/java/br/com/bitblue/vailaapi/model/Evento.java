@@ -21,6 +21,7 @@ public class Evento implements Serializable{
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
     @NotBlank
+    private String titulo;
     private String descricao;
     private Double preco = 0.0;
     @Temporal(TemporalType.DATE)
@@ -40,6 +41,14 @@ public class Evento implements Serializable{
 
     public void setId(Integer id) {
         this.id = id;
+    }
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
     }
 
     public String getDescricao() {
