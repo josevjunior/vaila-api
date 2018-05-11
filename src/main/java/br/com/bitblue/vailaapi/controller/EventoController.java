@@ -18,8 +18,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping(path = "/api", 
-        produces = "application/json;charset=UTF-8", 
-        consumes = "application/json;charset=UTF-8")
+        produces = "application/json",
+        consumes = "application/json")
 public class EventoController {
     
     @Autowired
