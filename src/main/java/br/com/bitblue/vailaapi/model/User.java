@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.EntityListeners;
 import javax.persistence.Id;
 import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
@@ -16,7 +17,8 @@ public class User {
     @Email
     private String email;
     
-    @Size(max = 10)
+    @Size(min = 3, max = 10)
+    @NotBlank
     private String password;
 
     public String getEmail() {
