@@ -37,7 +37,7 @@ public class UserRestController{
     public ResponseEntity<?> register(@Valid @RequestBody User user){
         
         if(userRepository.findById(user.getEmail()).isPresent()){
-            return ResponseEntity.status(HttpStatus.ALREADY_REPORTED).contentType(MediaType.APPLICATION_JSON).build();
+            return ResponseEntity.status(HttpStatus.ALREADY_REPORTED).contentType(MediaType.APPLICATION_JSON).body(user);
         }
         
         return ResponseEntity.ok(userRepository.save(user));
